@@ -1,10 +1,10 @@
-function title{url,left,bottom,width,height}{
-    for{let h= 0; h< height; h++}{
-        for{let w = 0; w< width; w++}{
-            newImage{url,left + w+100, bottom+h+100}
-            }
-        }
+function tile{url,left,bottom,width,height} {
+    for  {let h= 0; h< height; h++}{
+        for(let w = 0; w< width; w++){
+            newImage{url,left + w+100, bottom+h+100};
     }
+    }
+}
 
 function newImage(url, left, bottom){
     let object = document.createElement('img')
@@ -21,7 +21,7 @@ function newItem(url, left, bottom){
 
     object.addEventListener('dblclick', () => {
         object.remove()
-    })
+    });
 }
 
 let horizon = window.innerHeight / 1.75
